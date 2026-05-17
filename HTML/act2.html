@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Act 2 - getElementById</title>
+</head>
+<body>
+  <h1>Activity 2 - document.getElementById()</h1>
+
+  <p id="greeting">This will be replaced.</p>
+  <p id="score">Score goes here.</p>
+  <p id="myname">Name goes here.</p>
+
+  <script>
+    document.getElementById("greeting").innerHTML =
+      "Hello! JavaScript updated this!";
+
+    let total = 85 + 15;
+    document.getElementById("score").innerHTML =
+      "Your score is: " + total;
+
+    document.getElementById("myname").innerHTML =
+      "Student: Vince Jasmin"; 
+  </script>
+</body>
+</html>

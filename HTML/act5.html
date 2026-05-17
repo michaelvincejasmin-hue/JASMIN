@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Act 5 - let and Hoisting</title>
+  <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+  <h1>Activity 5 - let and Hoisting</h1>
+  <p id="demo"></p>
+  <p id="demo2"></p>
+  <p id="demo3"></p>
+
+  <script>
+    // HOISTING DEMO (from slide 28)
+    // using x BEFORE declaring it - still works with var!
+    x = 5;
+    document.getElementById("demo").innerHTML =
+      "Hoisting demo - x = " + x + " (declared below!)";
+    var x;
+
+    // let declaration
+    let city = "Manila";
+    let population = 14000000;
+    const COUNTRY = "Philippines";
+
+    document.getElementById("demo2").innerHTML =
+      "City: " + city + " | Country: " + COUNTRY;
+
+    // block scope demo
+    if (true) {
+      var varInBlock  = "I am var - visible outside!";
+      let letInBlock  = "I am let - block only!";
+    }
+    document.getElementById("demo3").innerHTML =
+      "var outside block: " + varInBlock;
+
+    console.log("city:", city, "| type:", typeof city);
+    console.log("COUNTRY:", COUNTRY, "| type:", typeof COUNTRY);
+  </script>
+</body>
+</html>

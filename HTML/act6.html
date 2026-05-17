@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Act 6 - window.alert()</title>
+  <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+  <h1>Activity 6 - window.alert()</h1>
+
+  <button onclick="showName()">Alert 1: My Name</button>
+  <button onclick="showMath()">Alert 2: Math Result</button>
+  <button onclick="showGrade()">Alert 3: Pass or Fail</button>
+
+  <script>
+    function showName() {
+      let name  = "Vince Jasmin"; // your name
+      let major = "BSIT 105";            // your course
+      window.alert("Name: " + name + "
+Major: " + major);
+    }
+
+    function showMath() {
+      let tuition = 15000;
+      let result  = tuition * 2;
+      window.alert("Tuition x2 = PHP " + result);
+    }
+
+    function showGrade() {
+      let score = 78;
+      if (score >= 75) {
+        window.alert("Score: " + score + " - PASS!");
+      } else {
+        window.alert("Score: " + score + " - FAIL.");
+      }
+    }
+  </script>
+</body>
+</html>

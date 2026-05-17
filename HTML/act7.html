@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Act 7 - document.write()</title>
+  <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+  <h1>Activity 7 - document.write()</h1>
+
+  <script>
+    // correct use: called DURING page load
+    document.write("<h3>Written by document.write()</h3>");
+    document.write("<p>Math result: " + (5 + 6) + "</p>");
+    document.write("<p>Today: " + new Date().toDateString() + "</p>");
+  </script>
+
+  <p><strong>WARNING:</strong> Clicking the button below will
+  erase this entire page because document.write() was called
+  AFTER the page finished loading!</p>
+
+  <button onclick="dangerZone()">Danger Zone - Click Me!</button>
+
+  <script>
+    function dangerZone() {
+      // called AFTER load - wipes the whole page!
+      document.write("Everything is gone! document.write after load!");
+    }
+  </script>
+</body>
+</html>

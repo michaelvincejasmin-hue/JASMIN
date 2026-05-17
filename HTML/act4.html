@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Act 4 - Variables</title>
+  <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+  <h1>Activity 4 - Variables and Data Types</h1>
+  <p id="out1"></p>
+  <p id="out2"></p>
+  <p id="out3"></p>
+
+  <script>
+    // var declarations - 6 different data types
+    var studentName = "Vince Jasmin"; // String
+    var age         = 20;              // Number
+    var isEnrolled  = true;            // Boolean
+    var gpa         = null;            // Null
+    var transferUnits;                   // Undefined
+    var grades      = [90, 85, 92];    // Array (non-primitive)
+
+    // implicit declaration (bad practice!)
+    implicitVar = 99; // no keyword — creates global var
+
+    // display using typeof
+    document.getElementById("out1").innerHTML =
+      "Name: " + studentName + " | type: " + typeof studentName;
+    document.getElementById("out2").innerHTML =
+      "Age: " + age + " | type: " + typeof age;
+    document.getElementById("out3").innerHTML =
+      "Enrolled: " + isEnrolled + " | type: " + typeof isEnrolled;
+
+    // log all types to console
+    console.log(typeof studentName, typeof age, typeof isEnrolled);
+    console.log(typeof gpa, typeof transferUnits, typeof grades);
+  </script>
+</body>
+</html>
